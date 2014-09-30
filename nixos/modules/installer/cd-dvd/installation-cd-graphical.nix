@@ -15,6 +15,8 @@ with lib;
   # there is no power management backend such as upower).
   powerManagement.enable = true;
 
+  boot.blacklistedKernelModules = ["nouveau"];
+
   # Don't start the X server by default.
   services.xserver.autorun = mkForce false;
 
